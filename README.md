@@ -18,6 +18,9 @@ Modulo 01 - Gobarber </br>
  -> Implemtando da  Agendamento do serviço  -  ok </br>
  -> Implemtando da  Validação do Agendamento  -  ok </br>
  -> Implemtando da  Listagem dos agendamento de usuario  -  ok </br>
+ -> Implemtando da  Listagem dos agendamento de provider  -  ok </br>
+ -> Implemtando da  comfigurando mongodatabase   -  ok </br>
+
 
 
 
