@@ -10,7 +10,7 @@ import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
 import NotificationController from './app/controllers/NotificationController';
-
+import AvailableController from './app/controllers/AvailableController';
 // Importando Middleware
 import authMiddleware from './app/middleware/auth';
 
@@ -23,6 +23,7 @@ routes.post('/session', SessionController.store);
 routes.use(authMiddleware);
 // providers
 routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 // appiontments
 routes.get('/appiontments', AppointmentController.index);
 routes.post('/appiontments', AppointmentController.store);
