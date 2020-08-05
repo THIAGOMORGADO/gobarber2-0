@@ -21,6 +21,7 @@ Modulo 01 - Gobarber </br>
  -> Implemtando da  Listagem dos agendamento de provider  -  ok </br>
  -> Implemtando da  comfigurando mongodatabase   -  ok </br>
  -> Implemtando da  notificaçoes (novo agendamento, listando agendamento, Marca notificação como lida, cancelamento de notification)  -  ok </br>
+ -> Implemtando do Email com nodemailer (enviando para caixa de entrada )  -  ok </br>
 
 
 
