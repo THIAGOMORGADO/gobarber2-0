@@ -9,6 +9,7 @@ import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
+import NotificationController from './app/controllers/NotificationController';
 
 // Importando Middleware
 import authMiddleware from './app/middleware/auth';
@@ -22,10 +23,17 @@ routes.post('/session', SessionController.store);
 routes.use(authMiddleware);
 // providers
 routes.get('/providers', ProviderController.index);
-// Apoontmes
-routes.post('/appiontments', AppointmentController.store);
+// appiontments
 routes.get('/appiontments', AppointmentController.index);
+routes.post('/appiontments', AppointmentController.store);
+routes.delete('/appiontments/:id', AppointmentController.delete);
+
+// schedule
 routes.get('/schedule', ScheduleController.index);
+// notification
+routes.get('/notification', NotificationController.index);
+routes.put('/notification/:id', NotificationController.update);
+
 // users
 routes.put('/users', UseController.update);
 // files
