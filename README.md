@@ -23,7 +23,7 @@ Modulo 01 - Gobarber </br>
  -> Implemtando da  notificaçoes (novo agendamento, listando agendamento, Marca notificação como lida, cancelamento de notification)  -  ok </br>
  -> Implemtando do Email com nodemailer (enviando para caixa de entrada, templetes de email, comfigurando fila com redis )  -  ok </br>
  -> Implemtando Monitorando falhas na fila  (Appointment)  -  ok </br>
- -> Implemtando Listando Horarios disponiveis  (Available) -aula 20 00:07:04  -  ok </br>
+ -> Implemtando Listando Horarios disponiveis  (Available) -aula 20 00:07:04  -  ok </br>"
 
 
 
