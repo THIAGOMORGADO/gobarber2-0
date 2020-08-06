@@ -1,8 +1,12 @@
+import 'dotenv/config';
 import express from 'express';
+
 import path from 'path';
+import Youch from 'youch';
 import * as Sentry from '@sentry/node';
+import 'express-async-errors';
+
 import routes from './routes';
-import sentryConfig from './config/sentry';
 
 // importando arquivo de index da pasta database
 import './database';
@@ -10,14 +14,14 @@ import './database';
 class App {
   constructor() {
     this.server = express();
-    Sentry.init(sentryConfig);
+    Sentry.init(Sentry);
 
     this.middlewares();
     this.routes();
   }
 
   middlewares() {
-    this.server(Sentry.Handlers.requestHandler());
+    this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json());
     this.server.use(
       '/file',
@@ -28,6 +32,19 @@ class App {
   routes() {
     this.server.use(routes);
     this.server.use(Sentry.Handlers.errorHandler());
+  }
+
+  exceptionhandler() {
+    this.server.use(async (err, req, res, next) => {
+      if (process.env.NODE_ENV === 'development') {
+        const errors = await new Youch(err, req).toJSON();
+
+        return res.status(500).json(errors);
+      }
+      return res.status(500).json({
+        error: 'Internal server error',
+      });
+    });
   }
 }
 export default new App().server;
