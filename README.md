@@ -25,6 +25,8 @@ Modulo 01 - Gobarber </br>
  -> Implemtando Monitorando falhas na fila  (Appointment)  -  ok </br>
  -> Implemtando Listando Horarios disponiveis  (Available) -  ok </br>"
   -> Implemtando Campos Vittuais no agendamento  (Available) -  ok </br>"
+  -> Implemtando Tratamento de exeção (Available) -  ok </br>"
+  -> Implemtando VARIAVEIS DE AMBIENTES  (Available) -  ok </br>"
 
 
 
